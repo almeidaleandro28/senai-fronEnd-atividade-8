@@ -1,5 +1,3 @@
-const btn = document.getElementById( "button");
-
 // score_1 peso = 2, score_2 peso = 3, score_3 peso = 5
 // weighted average
 // 5.0,6.0,7.0 = 6.3
@@ -19,4 +17,21 @@ function question_01(){
   return console.log()
 
 }
+//Senha Invalida or Acesso Permitido
+// 2200 Senha Invalida / 2002 Acesso Permitido
+function question_02() {
+  const getPassword = parseInt(document.getElementById( "password").value);
+  // const getTotal_2 = document.getElementById( "total_2" ).innerHTML = getPassword;
+  const passwordValid = 2002
 
+ if ( getPassword == passwordValid ) {
+  const getTotal_2 = document.getElementById( "total_2" ).innerHTML = getPassword;
+ } else {
+  const getTotal_2 = document.getElementById( "total_2" ).innerHTML = "access denied!";
+ }
+
+}
+
+function question_03(){
+  
+}
