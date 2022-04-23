@@ -31,7 +31,27 @@ function question_02() {
  }
 
 }
+//intervalos ([0,25], (25,50], (50,75], (75,100]) 
 
 function question_03(){
+
+  const number = parseInt( document.getElementById("number").value);
   
+  let numberInteval;
+
+  if ( number > 0 && number < 25 ) {
+    numberInteval = "[ 0...25 ]";
+  } else if ( number >= 25 && number < 50) {
+    numberInteval = "[ 25...50 ]";
+  } else if ( number >= 50 && number < 75) {
+    numberInteval = "[ 50...75 ]";
+  } else if (number >=75 && number <=100 ) {
+    numberInteval = "[ 75...100 ]";
+  } else {
+    numberInteval = "fora do intervalo";
+  }
+  console.log( typeof numberInteval );
+  document.getElementById("result").innerHTML = numberInteval;
+  
+
 }
