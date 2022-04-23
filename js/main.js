@@ -52,6 +52,37 @@ function question_03(){
   }
   console.log( typeof numberInteval );
   document.getElementById("result").innerHTML = numberInteval;
-  
+}
+// wage -> 0-400.00 / 
+//readjustment 15%
+function question_04(){
+  const currentWage = parseFloat( document.getElementById("sal_atual").value);
+  let percReadjustment;
+  let increaseWage;
+  let newWage;
+  console.log( currentWage )
 
+  if ( currentWage > 0 && currentWage < 400 ) {
+    percReadjustment  = 15;
+    increaseWage = ( percReadjustment * currentWage ) / 100;
+    newWage =  currentWage + increaseWage;
+  } else if ( currentWage >= 400.01 && currentWage < 800 ) {
+    percReadjustment  = 12;
+    increaseWage = ( percReadjustment * currentWage ) / 100;
+    newWage =  currentWage + increaseWage;
+  } else if ( currentWage >= 800.01 && currentWage < 120.00 ) {
+    percReadjustment  = 10;
+    increaseWage = ( percReadjustment * currentWage ) / 100;
+    newWage =  currentWage + increaseWage;
+  } else if ( currentWage >= 1200.01 && currentWage < 200.00 ) {
+    percReadjustment  = 7;
+    increaseWage = ( percReadjustment * currentWage ) / 100;
+    newWage =  currentWage + increaseWage;
+  } else {
+    percReadjustment  = 4;
+    increaseWage = ( percReadjustment * currentWage ) / 100;
+    newWage =  currentWage + increaseWage;
+  }
+
+  document.getElementById("total").innerHTML = `${percReadjustment} --- ${increaseWage} --- ${newWage}`;
 }
